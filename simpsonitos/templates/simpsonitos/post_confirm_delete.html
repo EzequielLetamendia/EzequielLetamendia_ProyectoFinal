@@ -1,0 +1,24 @@
+{% extends "simpsonitos/base.html" %}
+
+{% load static %}
+
+{% block principal %}
+<h1>
+    <br>
+    <p>
+        
+    </p>
+</h1>
+<div style="margin-top: 40px;">
+<p style="margin-top: 10px;">Queres borrar la publicacion {{ post.capitulo }}? </p>
+<form method="post">
+    
+    {% csrf_token %}
+    {{form}}
+    <input class="btn btn-danger" type="submit" value="Borrar">
+    <a class="btn btn-primary" href="{% url 'post-list' %}">Cancelar</a>
+</form>
+</div>
+    
+    
+{%endblock%}

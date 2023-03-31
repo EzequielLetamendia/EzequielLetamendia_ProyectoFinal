@@ -1,0 +1,19 @@
+{% extends "simpsonitos/base.html" %}
+
+{% load static %}
+
+{% block principal %}
+<h1>
+    <br>
+    <p>
+        
+    </p>
+</h1>
+<div style="margin-top:40px">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Actualizar">
+    </form>
+</div>
+{% endblock %}
